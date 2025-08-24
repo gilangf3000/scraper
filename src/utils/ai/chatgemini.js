@@ -27,7 +27,7 @@ async function sendMessage(prompt, language = "en", cookies = {}) {
       }
     );
 
-    let replyText = response.data.reply || JSON.stringify(response.data);
+    let replyText = JSON.stringify(response.data);
     try {
       const parsed = JSON.parse(replyText);
       if (parsed.generatedText) replyText = parsed.generatedText;

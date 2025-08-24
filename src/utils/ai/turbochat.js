@@ -13,7 +13,7 @@ async function sendMessage(message, model = "gpt-3.5-turbo", language = "en") {
       }
     );
 
-    const data = response.data; // ini sudah objek JS
+    const data = response.data;
     return {
       choices: [
         {
